@@ -1,0 +1,10 @@
+{
+  "ENV": "prod",
+  "ENDPOINT": {
+    "API": "http://www.kamilkolodynski.com/wallet/api/api.php"
+  },
+  "PATHS": {
+    "ASSETS": "assets/"
+  },
+  "DEBUG": false
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html ng-app="walletApp" ng-controller="ContentController">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your Wallet</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow, noarchive">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="HandheldFriendly"           content="true"/>
+    <meta name="apple-touch-fullscreen"     content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+
+    <!-- build:js vendor.min.js -->
+    <script src="assets/libs/angular.min.js"></script>
+    <script src="assets/libs/angular-route.min.js"></script>
+    <script src="assets/libs/angular-animate.min.js"></script>
+    <script src="assets/libs/angular-touch.min.js"></script>
+    <script src="assets/libs/angular-resource.min.js"></script>
+    <script src="assets/libs/angular-filter.min.js"></script>
+    <script src="assets/libs/angular-storage.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:css assets/css/bb.min.css -->
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <!-- endbuild -->
+</head>
+<body>
+
+<div class="container">
+    <main-header></main-header>
+    <div class="page" ng-view></div>
+</div>
+
+<!-- build:js bb.min.js -->
+<script src="app/shared/environmentConfig.js"></script>
+<script src="app/shared/config.js"></script>
+<script src="app/shared/helpers.js"></script>
+<script src="app/shared/services.js"></script>
+<script src="app/shared/filters.js"></script>
+
+<script src="assets/js/templates.js"></script>
+
+<script src="app/components/content/controller.js"></script>
+<script src="app/components/content/services.js"></script>
+
+<script src="app/components/errors/controller.js"></script>
+<script src="app/components/errors/directive.js"></script>
+
+<script src="app/components/wallet/controller.js"></script>
+<script src="app/components/wallet/directive.js"></script>
+<script src="app/components/wallet/services.js"></script>
+
+<script src="app/components/source/controller.js"></script>
+<script src="app/components/source/directive.js"></script>
+
+<script src="app/components/header/controller.js"></script>
+<script src="app/components/header/directive.js"></script>
+<script src="app/components/header/services.js"></script>
+
+<script src="app/app.routes.js"></script>
+<script src="app/app.module.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

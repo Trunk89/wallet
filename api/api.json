@@ -1,0 +1,14 @@
+{
+  "user": {
+    "id": "c5h556niru4h84",
+    "name": "Matt"
+  },
+  "wallet": {
+
+  },
+  "messages": {
+    "header.home": "Home",
+    "header.refresh": "Refresh",
+    "header.source": "View Source"
+  }
+}

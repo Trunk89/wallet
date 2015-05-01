@@ -1,0 +1,6 @@
+.idea/
+temp/
+min/
+src/assets/js/templates.js
+src/app/shared/environmentConfig.js
+node_modules/

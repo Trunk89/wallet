@@ -1,0 +1,10 @@
+{
+  "ENV": "dev",
+  "ENDPOINT": {
+    "API": "../api/api.json"
+  },
+  "PATHS": {
+    "ASSETS": "assets/"
+  },
+  "DEBUG": true
+}
