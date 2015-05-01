@@ -28,28 +28,6 @@
             */
             isArray: function isArray(element) {
                 return element && typeof element === 'object' && typeof element.length === 'number' && typeof element.splice === 'function' && !(element.propertyIsEnumerable('length'));
-            },
-            /**
-            * @method extendDeep
-            * @description Helps to deeply extend one object with another. It loops through all the arguments provided after target object, so it can be none, one or several of source objects.
-            * @memberof helpers.Utils
-            * @param {object} target - An element to be extended
-            * @param {object} [source1] - An element to extend from
-            * @param {object} [source2] - An element to extend from etc.
-            */
-            extendDeep: function extendDeep(target) {
-                angular.forEach(arguments, function (source) {
-                    if (source !== target) {
-                        angular.forEach(source, function (value, key) {
-                            if (target[key] && target[key].constructor && target[key].constructor === Object) {
-                                extendDeep(target[key], value);
-                            } else {
-                                target[key] = value;
-                            }
-                        });
-                    }
-                });
-                return target;
             }
         };
     }]);
