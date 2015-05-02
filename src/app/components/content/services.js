@@ -14,18 +14,13 @@
     content.factory('Endpoint', ['$rootScope', 'Ajax', 'ENV_CONFIG', function ($rootScope, Ajax, ENV_CONFIG) {
         return {
             loadInitialData: function getInitialData() {
-                var retryLoading = true;
-
                 function fetchData(response) {
-                    console.log(response);
-
+                    $rootScope.messages = response.data.messages;
+                    $rootScope.user = response.data.user;
                 }
 
                 function error() {
-                    if (retryLoading) {
-                        retryLoading = false;
-                        load();
-                    }
+                    $rootScope.generalError = true;
                 }
 
                 function load() {

@@ -18,7 +18,6 @@ module.exports = function(config) {
         'src/assets/libs/angular.min.js',
         'src/assets/libs/angular-animate.min.js',
         'src/assets/libs/angular-route.min.js',
-        'src/assets/libs/angular-resource.min.js',
         'src/assets/libs/angular-touch.min.js',
         'src/assets/libs/angular-filter.min.js',
 

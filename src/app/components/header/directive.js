@@ -12,17 +12,6 @@
         };
     }]);
 
-    header.directive("scrollHeader", ['$window', function ($window) {
-        return function(scope) {
-            angular.element($window).bind("scroll", function() {
-
-                scope.scrollingPageChangeClass = this.pageYOffset > 0;
-
-                scope.$apply();
-            });
-        };
-    }]);
-
 })();
 
 

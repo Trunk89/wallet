@@ -21,7 +21,7 @@
         }
     });
 
-    app.config(['$resourceProvider', '$logProvider', 'ENV_CONFIG', function($logProvider, ENV_CONFIG) {
+    app.config(['$logProvider', 'ENV_CONFIG', function($logProvider, ENV_CONFIG) {
         $logProvider.debugEnabled(ENV_CONFIG.DEBUG);
     }]);
 

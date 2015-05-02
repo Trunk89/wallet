@@ -106,7 +106,6 @@ module.exports = function (grunt) {
                     '<%= path %>assets/libs/angular.min.js',
                     '<%= path %>assets/libs/angular-animate.min.js',
                     '<%= path %>assets/libs/angular-route.min.js',
-                    '<%= path %>assets/libs/angular-resource.min.js',
                     '<%= path %>assets/libs/angular-touch.min.js',
                     '<%= path %>assets/libs/angular-filter.min.js',
                     '<%= path %>assets/libs/angular-storage.min.js'
@@ -122,8 +121,8 @@ module.exports = function (grunt) {
         uglify: {
             my_target: {
                 files: {
-                    '<%= minPath %>wallet.min.js': ['<%= tempPath %>wallet.min.js'],
-                    '<%= minPath %>vendor.min.js': ['<%= tempPath %>vendor.min.js']
+                    'min/wallet.min.js': ['<%= tempPath %>wallet.min.js'],
+                    'min/vendor.min.js': ['<%= tempPath %>vendor.min.js']
                 }
             }
         },
@@ -133,7 +132,7 @@ module.exports = function (grunt) {
             },
             target: {
                 files: {
-                    '<%= minPath %>assets/css/wallet.min.css': ['<%= tempPath %>assets/css/wallet.min.css']
+                    'min/assets/css/wallet.min.css': ['<%= tempPath %>assets/css/wallet.min.css']
                 }
             }
         },
@@ -148,15 +147,15 @@ module.exports = function (grunt) {
         copy: {
             all: {
                 expand: true,
-                cwd: '<%= path %>',
+                cwd: 'src/',
                 src: ['assets/img/**.*', 'assets/fonts/**.*', 'index.html', 'app/pages/*.html'],
-                dest: '<%= minPath %>'
+                dest: 'min/'
             },
             temp: {
                 expand: true,
-                cwd: '<%= path %>',
+                cwd: 'src/',
                 src: ['assets/img/**.*', 'assets/fonts/**.*', 'index.html', 'app/pages/*.html'],
-                dest: '<%= tempPath %>'
+                dest: 'temp/'
             }
         },
         rev: {
@@ -166,8 +165,8 @@ module.exports = function (grunt) {
         },
         ngtemplates:  {
             common: {
-                src:      '<%= path %>app/components/**/*.html',
-                dest:     '<%= path %>assets/js/templates.js',
+                src:      'src/app/components/**/*.html',
+                dest:     'src/assets/js/templates.js',
                 options:    {
                     htmlmin:  { collapseWhitespace: true, collapseBooleanAttributes: true }
                 }
@@ -177,7 +176,7 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     name: 'config',
-                    dest: '<%= path %>app/shared/environmentConfig.js',
+                    dest: 'src/app/shared/environmentConfig.js',
                     constants: {
                         ENV_CONFIG: grunt.file.readJSON('src/assets/configs/prod.json')
                     },
@@ -192,7 +191,7 @@ module.exports = function (grunt) {
             dev: {
                 options: {
                     name: 'config',
-                    dest: '<%= path %>app/shared/environmentConfig.js',
+                    dest: 'src/app/shared/environmentConfig.js',
                     constants: {
                         ENV_CONFIG: grunt.file.readJSON('src/assets/configs/dev.json')
                     }
@@ -214,7 +213,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('concatonate', ['concat:app', 'concat:vendor', 'concat:css']);
 
-    grunt.registerTask('default', [ /*'jshint', */'templates', 'devconfig', 'test']);
+    grunt.registerTask('default', [ 'jshint', 'templates', 'devconfig', 'test']);
     grunt.registerTask('prebuild', [ 'jshint', 'templates', 'prodconfig', 'test']);
 
     grunt.registerTask('prodconfig', ['ngconstant:dist']);
