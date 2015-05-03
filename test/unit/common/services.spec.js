@@ -1,5 +1,3 @@
-var expect = chai.expect;
-
 describe("[common services]", function () {
 
     beforeEach(
