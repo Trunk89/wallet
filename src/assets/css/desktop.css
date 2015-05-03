@@ -1,0 +1,21 @@
+@media (min-width: 600px) {
+    .header .navigation li {
+        float: left;
+        padding: 15px 10px;
+        margin: 0 5px;
+        border: none;
+    }
+
+    .header .navigation.show,
+    .header .navigation {
+        height: 50px;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 120px;
+    }
+
+    .header .menu__btn {
+        display: none;
+    }
+}

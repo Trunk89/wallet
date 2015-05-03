@@ -32,4 +32,25 @@
         };
     }]);
 
+    /**
+     * @constructor Navigation
+     * @memberof common
+     * @description Handle routes navigation
+     */
+    common.factory('Navigation', ['$location', function ($location) {
+        return {
+            /**
+             * @method navigate
+             * @description Navigates to given path, checking if the current if not the same
+             * @memberof common.Navigation
+             * @param {string} page
+             */
+            navigate: function navigate(page) {
+                var currentPage = $location.path().substring(1);
+
+                return page === currentPage ? 'active' : $location.path('/' + page);
+            }
+        };
+    }]);
+
 }());

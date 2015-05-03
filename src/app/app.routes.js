@@ -10,7 +10,7 @@
             }).
             when('/wallet', {
                 controller: 'WalletController',
-                templateUrl: CONFIG.URL.ROUTE.HOME
+                templateUrl: CONFIG.URL.ROUTE.WALLET
             }).
             otherwise({
                 redirectTo: '/'

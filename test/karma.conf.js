@@ -20,6 +20,7 @@ module.exports = function(config) {
         'src/assets/libs/angular-route.min.js',
         'src/assets/libs/angular-touch.min.js',
         'src/assets/libs/angular-filter.min.js',
+        'src/assets/libs/angular-storage.min.js',
 
         'src/app/shared/environmentConfig.js',
         'src/app/shared/config.js',

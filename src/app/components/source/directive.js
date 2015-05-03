@@ -8,7 +8,7 @@
             restrict: 'E',
             replace: true,
             controller: 'SourceController',
-            template: $templateCache.get(CONFIG.URL.TEMPLATE.WALLET)
+            template: $templateCache.get(CONFIG.URL.TEMPLATE.VIEW_SOURCE)
         };
     }]);
 

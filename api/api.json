@@ -9,6 +9,7 @@
   "messages": {
     "header.home": "Home",
     "header.refresh": "Refresh",
-    "header.source": "View Source"
+    "header.source": "View Source",
+    "wallet.logo": "WALLET"
   }
 }

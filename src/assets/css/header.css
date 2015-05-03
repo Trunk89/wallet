@@ -1,9 +1,55 @@
 .header {
-    height: 50px;
     background-color: #fff;
     width: 100%;
     position: relative;
-    top: 0;
-    box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
     min-width: 320px;
+}
+
+.header .navigation__header {
+    height: 50px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
+}
+
+.header .navigation__header .logo {
+    margin: 15px 0 0 10px;
+    display: inline-block;
+}
+
+.header .navigation {
+    text-align: center;
+    overflow: hidden;
+    height: 0;
+}
+
+.header .navigation.show {
+    display: block;
+    height: 123px;
+}
+
+.header .navigation.ng-animate {
+    -webkit-transition: height 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+}
+
+.header .navigation li {
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.header .menu__btn {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    font-size: 20px;
+}
+
+.header .menu__btn:active {
+    color: #eee;
+    background-color: #757575;
 }
