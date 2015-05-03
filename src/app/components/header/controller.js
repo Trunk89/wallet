@@ -4,7 +4,7 @@
 
     var header = angular.module('header', ['common', 'config', 'formatter']);
 
-    header.controller('HeaderController', ['$rootScope', '$scope', '$log', '$location', '$localStorage', 'Navigation', function($rootScope, $scope, $log, $location, $localStorage, Navigation) {
+    header.controller('HeaderController', ['$rootScope', '$scope', '$log', '$location', '$localStorage', 'Navigation', '$window', function($rootScope, $scope, $log, $location, $localStorage, Navigation, $window) {
 
         $scope.$watch('user.id', function(newValue, oldValue) {
             if(newValue === oldValue && !$scope.user) {
@@ -28,7 +28,7 @@
         };
 
         $scope.viewSource = function () {
-
+            $window.open("view-source:" + $window.location);
         };
 
         $log.debug('[wallet] Header controller ran');

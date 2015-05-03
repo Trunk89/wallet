@@ -55,9 +55,10 @@ body.disable--scrolling {
 }
 
 .page {
-    background-color: #fff;
+    background-color: #eee;
     height: 100%;
     padding: 10px 10px 0;
+    min-height: 400px;
 }
 
 .ellipsify {
@@ -127,6 +128,10 @@ h2 {
 
 .border__top {
     border-top: 1px solid #757575;
+}
+
+button {
+    border: none;
 }
 
 button:focus {
