@@ -3,8 +3,5 @@
   "ENDPOINT": {
     "API": "../api/api.json"
   },
-  "PATHS": {
-    "ASSETS": "assets/"
-  },
   "DEBUG": true
 }

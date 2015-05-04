@@ -1,3 +1,4 @@
-<div>
-    Home
+<wallet-main ng-if="!generalError"></wallet-main>
+<div ng-if="generalError" class="error borders__standard border__radius">
+    Error has occurred. Please try again later.
 </div>

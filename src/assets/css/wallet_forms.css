@@ -1,0 +1,26 @@
+.wallet .form__container {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.wallet form input {
+    padding: 10px;
+    width: 155px;
+}
+
+.wallet form button {
+    width: 90px;
+}
+
+.wallet form input.ng-touched.ng-invalid,
+.wallet form input.ng-untouched {
+    border-bottom: 2px #000 solid;
+}
+
+.wallet form input.ng-valid {
+    border-bottom: 2px forestgreen solid;
+}
+
+.wallet form input.ng-invalid.ng-invalid-pattern {
+    border-bottom: 2px darkred solid;
+}

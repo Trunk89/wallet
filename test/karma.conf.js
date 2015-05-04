@@ -33,13 +33,9 @@ module.exports = function(config) {
         'src/app/components/wallet/controller.js',
         'src/app/components/wallet/directive.js',
         'src/app/components/wallet/services.js',
-        'src/app/components/source/controller.js',
-        'src/app/components/source/directive.js',
         'src/app/components/header/controller.js',
         'src/app/components/header/directive.js',
         'src/app/components/header/services.js',
-        'src/app/components/errors/controller.js',
-        'src/app/components/errors/directive.js',
         'src/app/app.routes.js',
         'src/app/app.module.js',
 

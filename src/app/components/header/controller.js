@@ -4,7 +4,7 @@
 
     var header = angular.module('header', ['common', 'config', 'formatter']);
 
-    header.controller('HeaderController', ['$rootScope', '$scope', '$log', '$location', '$localStorage', 'Navigation', '$window', function($rootScope, $scope, $log, $location, $localStorage, Navigation, $window) {
+    header.controller('HeaderController', ['$rootScope', '$scope', '$log', '$location', '$localStorage', 'Navigation', '$window', '$timeout', function($rootScope, $scope, $log, $location, $localStorage, Navigation, $window, $timeout) {
 
         $scope.$watch('user.id', function(newValue, oldValue) {
             if(newValue === oldValue && !$scope.user) {
@@ -24,7 +24,10 @@
 
         $scope.refresh = function () {
             $localStorage.$reset();
-            $scope.navigate('wallet');
+
+            $timeout(function () {
+                window.location.reload();
+            },500);
         };
 
         $scope.viewSource = function () {

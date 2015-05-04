@@ -17,4 +17,18 @@
         };
     }]);
 
+    formatter.filter('currencyFilter', [function() {
+        return function(unformattedType) {
+
+            return '£' + unformattedType;
+        };
+    }]);
+
+    formatter.filter('floatValue', [function() {
+        return function(unformattedType) {
+
+            return parseFloat(Math.round(unformattedType * 100) / 100).toFixed(2);
+        };
+    }]);
+
 }());

@@ -1,3 +1,10 @@
-<div>
-    Wallet body
+<div class="wallet">
+    <h2 class="align__right">{{messages['wallet.total']}}<span class="icon-money"></span>{{currentBalance | floatValue}}</h2>
+
+    <wallet-forms></wallet-forms>
+
+    <div class="error error__remove borders__standard border__radius" ng-show="removeError">{{messages['error.remove']}}</div>
+
+    <wallet-history></wallet-history>
 </div>
+

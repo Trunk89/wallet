@@ -1,10 +1,7 @@
 {
   "ENV": "prod",
   "ENDPOINT": {
-    "API": "../api/api.php"
-  },
-  "PATHS": {
-    "ASSETS": "assets/"
+    "API": "../api/api.json"
   },
   "DEBUG": false
 }

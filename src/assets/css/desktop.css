@@ -1,4 +1,16 @@
+@media (min-width: 450px) {
+    /*************************
+    * Wallet
+    *************************/
+    .wallet .history__item .item {
+        max-width: 230px;
+    }
+}
+
 @media (min-width: 600px) {
+    /*************************
+    * Header
+    *************************/
     .header .navigation li {
         float: left;
         padding: 15px 10px;
@@ -12,10 +24,50 @@
         padding: 0;
         position: absolute;
         top: 0;
-        left: 120px;
+        left: 140px;
     }
 
     .header .menu__btn {
         display: none;
+    }
+}
+
+@media (min-width: 640px) {
+    /*************************
+    * Wallet
+    *************************/
+    .wallet .item > div,
+    .wallet .titles > div {
+        float: left;
+        width: 35%;
+    }
+
+    .wallet .item > div:first-child,
+    .wallet .titles > div:first-child {
+        width: 10%;
+    }
+
+    .wallet .item > div:nth-child(2),
+    .wallet .titles > div:nth-child(2) {
+        width: 20%;
+    }
+
+    .wallet .history__item {
+        height: 50px;
+    }
+
+    .wallet .history__item .total {
+        text-align: right;
+    }
+
+    .wallet .history__item .titles,
+    .wallet .history__item .item {
+        display: block;
+        position: relative;
+        text-align: center;
+        height: 20px;
+        margin-top: 0;
+        max-width: 100%;
+        right: 0;
     }
 }

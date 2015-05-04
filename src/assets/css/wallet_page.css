@@ -1,0 +1,16 @@
+.wallet {
+    max-width: 600px;
+    margin: 0 auto;
+    overflow:auto
+}
+
+.wallet .icon-money {
+    padding: 0 5px;
+}
+
+.wallet h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+}

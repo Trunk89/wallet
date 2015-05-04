@@ -11,7 +11,9 @@
             TEMPLATE: {
                 HEADER: 'src/app/components/header/header.html',
                 WALLET: {
-                    MAIN: 'src/app/components/wallet/wallet.html'
+                    MAIN: 'src/app/components/wallet/wallet.html',
+                    HISTORY: 'src/app/components/wallet/templates/history.html',
+                    FORMS: 'src/app/components/wallet/templates/forms.html'
                 },
                 ERRORS: {
                     DATA_ERROR: 'src/app/components/errors/error_message.html'

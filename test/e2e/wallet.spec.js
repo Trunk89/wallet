@@ -6,7 +6,7 @@ describe( 'E2E: example', function() {
 
     it( 'should have the expected title', function () {
         browser.get( '/' );
-        var title='Bambino Buddy';
+        var title='Your Wallet';
 
         expect(browser.getTitle()).toBe(title);
     });

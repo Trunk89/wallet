@@ -89,13 +89,9 @@ module.exports = function (grunt) {
                     '<%= path %>app/components/wallet/controller.js',
                     '<%= path %>app/components/wallet/directive.js',
                     '<%= path %>app/components/wallet/services.js',
-                    '<%= path %>app/components/source/controller.js',
-                    '<%= path %>app/components/source/directive.js',
                     '<%= path %>app/components/header/controller.js',
                     '<%= path %>app/components/header/directive.js',
                     '<%= path %>app/components/header/services.js',
-                    '<%= path %>app/components/errors/controller.js',
-                    '<%= path %>app/components/errors/directive.js',
                     '<%= path %>app/app.routes.js',
                     '<%= path %>app/app.module.js'
                 ],
@@ -114,7 +110,16 @@ module.exports = function (grunt) {
                 dest: '<%= tempPath %>vendor.min.js'
             },
             css: {
-                src: ['<%= path %>assets/css/*.css'],
+                src: [
+                    '<%= path %>assets/css/normalize.css',
+                    '<%= path %>assets/css/base.css',
+                    '<%= path %>assets/css/header.css',
+                    '<%= path %>assets/css/wallet_forms.css',
+                    '<%= path %>assets/css/wallet_page.css',
+                    '<%= path %>assets/css/wallet_history.css',
+                    '<%= path %>assets/css/errors.css',
+                    '<%= path %>assets/css/desktop.css'
+                ],
                 dest: '<%= tempPath %>assets/css/wallet.min.css'
             }
         },

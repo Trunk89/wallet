@@ -3,15 +3,28 @@
 
     var wallet = angular.module('wallet');
 
-    wallet.directive('walletX', ['CONFIG', '$templateCache', function (CONFIG, $templateCache) {
+    wallet.directive('walletMain', ['CONFIG', '$templateCache', function (CONFIG, $templateCache) {
         return {
             restrict: 'E',
             replace: true,
-            controller: 'WalletController',
             template: $templateCache.get(CONFIG.URL.TEMPLATE.WALLET.MAIN)
         };
     }]);
 
+    wallet.directive('walletHistory', ['CONFIG', '$templateCache', function (CONFIG, $templateCache) {
+        return {
+            restrict: 'E',
+            replace: true,
+            template: $templateCache.get(CONFIG.URL.TEMPLATE.WALLET.HISTORY)
+        };
+    }]);
+
+    wallet.directive('walletForms', ['CONFIG', '$templateCache', function (CONFIG, $templateCache) {
+        return {
+            restrict: 'E',
+            replace: true,
+            template: $templateCache.get(CONFIG.URL.TEMPLATE.WALLET.FORMS)
+        };
+    }]);
+
 })();
-
-

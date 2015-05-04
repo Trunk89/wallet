@@ -1,0 +1,22 @@
+<div class="history">
+    <div ng-if="history.length > 0">
+        <div class="history__title">{{messages['wallet.history.title']}}</div>
+        <div class="history__item" ng-repeat="item in history track by $index">
+            <div class="titles">
+                <div>{{messages['wallet.titles.number']}}</div>
+                <div>{{messages['wallet.titles.date']}}</div>
+                <div>{{messages['wallet.titles.amount']}} ({{item.type}})</div>
+                <div class="total">{{messages['wallet.titles.balance']}}</div>
+            </div>
+            <div class="item">
+                <div class="ellipsify">{{$index + 1}}</div>
+                <div class="ellipsify">{{item.date}}</div>
+                <div class="ellipsify">{{item.amount | floatValue | currencyFilter}}</div>
+                <div class="ellipsify total">{{item.totalBalance | floatValue | currencyFilter}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="no__items" ng-if="history.length < 1">
+        <span>{{messages['wallet.history.empty']}}</span>
+    </div>
+</div>

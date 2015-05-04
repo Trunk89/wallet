@@ -35,6 +35,11 @@
     content: "\f0c9";
 }
 
+.icon-money:before {
+    content: "\f154";
+}
+
+
 * {
     -webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
 }
@@ -57,7 +62,7 @@ body.disable--scrolling {
 .page {
     background-color: #eee;
     height: 100%;
-    padding: 10px 10px 0;
+    padding: 20px 20px 0;
     min-height: 400px;
 }
 
@@ -88,7 +93,7 @@ body.disable--scrolling {
 
 h1 {
     margin: 0;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 h2 {
@@ -130,10 +135,33 @@ h2 {
     border-top: 1px solid #757575;
 }
 
+.align__right {
+    text-align: right;
+}
+
+.align__left {
+    text-align: right;
+}
+
+.ellipsify {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 button {
     border: none;
 }
 
+input:required,
+input:invalid {
+    box-shadow:none;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
 button:focus {
     outline: none;
 }

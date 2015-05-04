@@ -4,12 +4,25 @@
     "name": "Matt"
   },
   "wallet": {
-
+    "currentBalance": "0",
+    "history": []
   },
   "messages": {
     "header.home": "Home",
-    "header.refresh": "Refresh",
+    "header.refresh": "Reset",
     "header.source": "View Source",
-    "wallet.logo": "WALLET"
+    "wallet.logo": "WALLET",
+    "wallet.total": "Total balance:",
+    "wallet.history.empty": "No history",
+    "wallet.history.title": "Transactions History",
+    "wallet.button.remove": "REMOVE",
+    "wallet.button.add": "ADD",
+    "wallet.add.placeholder": "Add balance to wallet",
+    "wallet.remove.placeholder": "Withdraw from wallet",
+    "wallet.titles.amount": "Operation",
+    "wallet.titles.date": "Date",
+    "wallet.titles.balance": "Total",
+    "wallet.titles.number": "ID",
+    "error.remove": "Could not withdraw money. Please ensure you have enough funds."
   }
 }

@@ -1,0 +1,32 @@
+<div>
+    <div class="form__container">
+        <form role="form" ng-submit="addBalance()">
+            <input type="text"
+                   title="Please enter a valid currency format. e.g 10.15, 10000.5"
+                   ng-model="form.addBalance"
+                   id="add__balance"
+                   name="add__balance"
+                   pattern="\d+(\.\d{1,2})?"
+                   placeholder={{messages['wallet.add.placeholder']}}
+                   class="borders__standard"
+                   required
+                    />
+            <button type="submit" class="btn border__radius borders__standard">{{messages['wallet.button.add']}}</button>
+        </form>
+    </div>
+    <div class="form__container">
+        <form role="form" ng-submit="removeBalance()">
+            <input type="text"
+                   title="Please enter a valid currency format. e.g 10.15, 10000.5"
+                   ng-model="form.removeBalance"
+                   id="remove__balance"
+                   name="remove__balance"
+                   pattern="\d+(\.\d{1,2})?"
+                   placeholder={{messages['wallet.remove.placeholder']}}
+                   class="borders__standard"
+                   required
+                    />
+            <button type="submit" class="btn border__radius borders__standard">{{messages['wallet.button.remove']}}</button>
+        </form>
+    </div>
+</div>
