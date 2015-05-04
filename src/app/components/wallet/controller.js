@@ -26,14 +26,22 @@
 
         $scope.addBalance = function() {
             var amountToAdd = $scope.form.addBalance,
-                currentBalance;
+                currentBalance,
+                historyEntry,
+                history;
 
             $scope.removeError = false;
 
             currentBalance = Balance.add(amountToAdd, $scope.currentBalance);
 
             $localStorage.wallet.currentBalance = currentBalance;
-            $scope.history.push(History.create(amountToAdd, currentBalance, 'add'));
+
+            historyEntry = History.create(amountToAdd, currentBalance, 'add');
+            $scope.history.push(historyEntry);
+
+            history = $scope.history;
+
+            $localStorage.wallet.history = history;
 
             $scope.form.addBalance = '';
             $scope.currentBalance = currentBalance;
@@ -41,7 +49,9 @@
 
         $scope.removeBalance = function() {
             var amountToRemove = $scope.form.removeBalance,
-                balance = Balance.remove(amountToRemove, $scope.currentBalance);
+                balance = Balance.remove(amountToRemove, $scope.currentBalance),
+                historyEntry,
+                history;
 
             $scope.removeError = false;
 
@@ -49,7 +59,14 @@
                 $scope.removeError = true;
             } else {
                 $localStorage.wallet.currentBalance = balance;
-                $scope.history.push(History.create(amountToRemove, balance, 'remove'));
+
+                historyEntry = History.create(amountToRemove, balance, 'remove');
+                $scope.history.push(historyEntry);
+
+                history = $scope.history;
+
+                $localStorage.wallet.history = history;
+
                 $scope.currentBalance = balance;
                 $scope.form.removeBalance = '';
             }
