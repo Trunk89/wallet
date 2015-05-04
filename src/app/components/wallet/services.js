@@ -70,9 +70,10 @@
                     day = date.getDate(),
                     month = date.getMonth()+ 1,
                     year = date.getFullYear(),
-                    fullDate,
-                    amount = parseFloat(amount),
-                    balance = parseFloat(balance);
+                    fullDate;
+
+                amount = parseFloat(amount);
+                balance = parseFloat(balance);
 
                 if (day < 10) {
                     day = '0' + day;
