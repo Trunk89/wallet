@@ -1,7 +1,7 @@
 {
   "ENV": "dev",
   "ENDPOINT": {
-    "API": "../api/api.json"
+    "API": "../api/wallet.api.json"
   },
   "DEBUG": true
 }

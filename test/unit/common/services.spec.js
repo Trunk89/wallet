@@ -18,9 +18,9 @@ describe("[common services]", function () {
 
         it("should make a successful ajax call to api", function () {
 
-            $httpBackend.whenGET('../api/api.json').respond(200, {user: 'Adam'});
+            $httpBackend.whenGET('../api/wallet.api.json').respond(200, {user: 'Adam'});
 
-            Ajax.get({url: '../api/api.json', success: dataResponse, error: dataResponse});
+            Ajax.get({url: '../api/wallet.api.json', success: dataResponse, error: dataResponse});
 
             function dataResponse(res) {
                 expect(res.data).to.eql({user: 'Adam'});
@@ -33,9 +33,9 @@ describe("[common services]", function () {
 
         it("should make an ajax call to api resulting in error", function () {
 
-            $httpBackend.whenGET('../api/api.json').respond(500);
+            $httpBackend.whenGET('../api/wallet.api.json').respond(500);
 
-            Ajax.get({url: '../api/api.json', success: dataResponse, error: dataResponse});
+            Ajax.get({url: '../api/wallet.api.json', success: dataResponse, error: dataResponse});
 
             function dataResponse(res) {
                 expect(res.status).to.equal(500);
